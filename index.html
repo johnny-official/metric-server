@@ -4,93 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Landing Page</title>
+    <title>Team Hacker Lor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             background-color: #f4f4f4;
-            overflow: hidden;
         }
 
         .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 90%;
-            max-width: 600px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-in-out;
+            margin: 50px auto;
+            max-width: 900px;
         }
 
         h1 {
+            font-size: 2rem;
             margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: all 0.8s ease-in-out 0.2s;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
         }
 
         .team-member {
-            margin: 10px 0;
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s ease-in-out;
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
         }
 
         .logo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 80px;
-            opacity: 0;
-            transform: scale(0.5);
-            transition: all 0.8s ease-in-out 0.5s;
+            display: block;
+            margin: 0 auto;
+            width: 180px;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 
 <body>
-    <img src="fpt_logo.png" alt="FPT University Logo" class="logo">
+    <img src="https://fpt.edu.vn/Content/images/assets/2021-FPTU-Eng.png" alt="FPT University Logo" class="logo">
     <div class="container">
-        <h1>Danh Sách Thành Viên</h1>
-        <div class="team-member"> <strong>Họ và Tên:</strong> [Tên 1] <br> <strong>Mã Sinh Viên:</strong> [Mã 1] </div>
-        <div class="team-member"> <strong>Họ và Tên:</strong> [Tên 2] <br> <strong>Mã Sinh Viên:</strong> [Mã 2] </div>
-        <div class="team-member"> <strong>Họ và Tên:</strong> [Tên 3] <br> <strong>Mã Sinh Viên:</strong> [Mã 3] </div>
-        <div class="team-member"> <strong>Họ và Tên:</strong> [Tên 4] <br> <strong>Mã Sinh Viên:</strong> [Mã 4] </div>
-        <div class="team-member"> <strong>Họ và Tên:</strong> [Tên 5] <br> <strong>Mã Sinh Viên:</strong> [Mã 5] </div>
+        <h1>Johnny Và Những Người Bạn :))</h1>
+        <div class="team">
+            <div class="team-member">
+                <img src="https://i.imgur.com/57mpdAc.jpeg" alt="Tran Nguyen Anh Duong" class="member-photo">
+                <h3>Tran Nguyen Anh Duong</h3>
+                <p>Creative Leader</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.imgur.com/hPJpEmF.png" alt="Tran Quoc Nhat Vu" class="member-photo">
+                <h3>Tran Quoc Nhat Vu</h3>
+                <p>Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.imgur.com/w4g7AwP.jpeg" alt="Nguyen Viet Bao Dien" class="member-photo">
+                <h3>Nguyen Viet Bao Dien</h3>
+                <p>System Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.imgur.com/aUexocU.jpeg" alt="Phan Nguyen Thi" class="member-photo">
+                <h3>Phan Nguyen Thi</h3>
+                <p>Project Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.imgur.com/V5Rq8y1.jpeg" alt="Le Phuoc" class="member-photo">
+                <h3>Le Phuoc</h3>
+                <p>Designer</p>
+            </div>
+        </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.querySelector(".container");
-            const members = document.querySelectorAll(".team-member");
-            const logo = document.querySelector(".logo");
-            const title = document.querySelector("h1");
-
-            setTimeout(() => {
-                container.style.opacity = "1";
-                container.style.transform = "translateY(0)";
-                logo.style.opacity = "1";
-                logo.style.transform = "scale(1)";
-                title.style.opacity = "1";
-                title.style.transform = "translateY(0)";
-                members.forEach((member, index) => {
-                    setTimeout(() => {
-                        member.style.opacity = "1";
-                        member.style.transform = "translateX(0)";
-                    }, index * 300);
-                });
-            }, 500);
-        });
-    </script>
 </body>
 
 </html>
